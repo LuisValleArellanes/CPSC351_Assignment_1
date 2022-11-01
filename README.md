@@ -223,11 +223,15 @@ string abcd in file string.txt among 10 child processes.
 
 • This assignment MUST be completed using C or C++ on Linux. item You may
 work in groups of 4.
-• Your assignment must compile and run on Tuffix.
-• Please hand in your source code electronically (do not submit .o or executable code)
+
+    • Your assignment must compile and run on Tuffix.
+
+    • Please hand in your source code electronically (do not submit .o or executable code)
 through CANVAS.
-• You must make sure that the code compiles and runs correctly.
-• Write a README file (text file, do not submit a .doc file) which contains
+
+    • You must make sure that the code compiles and runs correctly.
+
+    • Write a README file (text file, do not submit a .doc file) which contains
 – The names and email addresses of all group members.
 – Description of contributions of each team member.
 – A truthful statement asserting that each team member is familiar with all functionality in the assignment.
@@ -237,21 +241,32 @@ through CANVAS.
 – The answers to all questions above.
 – Whether you implemented the extra credit.
 – Anything special about your submission that we should take note of.
-• Place all your files under one directory with a unique name (such as p1-[userid] for
+
+    • Place all your files under one directory with a unique name (such as p1-[userid] for
 assignment 1, e.g. p1-mgofman1).
-• Tar the contents of this directory using the following command. tar cvf
+
+    • Tar the contents of this directory using the following command. tar cvf
 [directory name].tar [directory name] E.g. tar -cvf p1-mgofman1.tar
 p1-mgofman1/
-• Use CANVAS to upload the tared file you created above.
+
+    • Use CANVAS to upload the tared file you created above.
 Grading guideline:
-• All programs compile: 5’
-• Correctly shell: 25’
-• Correct serial fetcher: 30’
-• Correct parallel fetcher: 30’
-• Execution times for both fetchers: 5’
-• README file: 5’
-• Bonus: 15’
-• Late submissions shall be penalized 10%. No assignments shall be accepted after 24 hours.
+
+    • All programs compile: 5’
+
+    • Correctly shell: 25’
+
+    • Correct serial fetcher: 30’
+
+    • Correct parallel fetcher: 30’
+
+    • Execution times for both fetchers: 5’
+
+    • README file: 5’
+
+    • Bonus: 15’
+
+    • Late submissions shall be penalized 10%. No assignments shall be accepted after 24 hours.
 
 
 Academic Honesty:
