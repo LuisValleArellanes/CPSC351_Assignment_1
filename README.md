@@ -27,7 +27,7 @@ the following job roles:
 • Security Architect
 • Systems Security Analyst
 • Information Systems Security Developer
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 # Part I Overview
 
 Write a simple shell program called shell. When ran, the parent process will print out the
@@ -60,7 +60,7 @@ p e r r o r ( ’ ’ f o r k ’ ’ ) ;
 e x i t ( −1);
 }
 The perror() function above will print out fork followed by the explanation of the error.
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 # Part II Overview
 
 In this part you will design a two programs that make use of fork(), execlp(), and wait()
