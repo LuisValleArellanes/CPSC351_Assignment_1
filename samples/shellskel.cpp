@@ -24,10 +24,14 @@ int main()
 		/* Prompt the user to enter the command */
 		cerr << "cmd>  ";
 		cin >> cmdBuff;
+		
+		char *inString; 
 
 		int childEventInfo;
 
 		int waitReturn; 
+
+		string x;
 		/* If the user wants to exit */
 		if(cmdBuff != "exit")
 		{
@@ -37,8 +41,19 @@ int main()
 			pid = fork();
 
 			if(pid == 0){
+				cin<<x;
 
-				execlp("/bin/", "ls", "-l", NULL);
+				/*** TODO: If I am child, I will do this: ****/
+			/* Call execlp() to replace my program with that specified at the command line.
+			 * PLEASE NOTE: YOU CANNOT PASS cmdBuff DIRECTLY to execlp(). It is because 
+			 * cmdBuff is an object of type string (i.e., a class) and execlp() expects
+ 			 * an arry of characters.  However, you can pass cmdBuff.c_str(), which will
+			 * return an array of characters representation of the string object.
+			 * 
+			 * Also, please do not forget to error check your exelp() system calls.
+			 */
+
+				execlp("/bin/%x" , "ls", "-l", "a", NULL);
 				
 
 			}
@@ -54,6 +69,10 @@ int main()
 				}
 
 			else{ 
+
+				/*** TODO: If I am a parent, I will do the following ***?
+			/* Wait for the child process to terminate */
+
 				waitReturn = wait(&childEventInfo);
 				
 				printf("Child has been completed");
@@ -63,15 +82,8 @@ int main()
 			
 			
 				
-			/*** TODO: If I am child, I will do this: ****/
-			/* Call execlp() to replace my program with that specified at the command line.
-			 * PLEASE NOTE: YOU CANNOT PASS cmdBuff DIRECTLY to execlp(). It is because 
-			 * cmdBuff is an object of type string (i.e., a class) and execlp() expects
- 			 * an arry of characters.  However, you can pass cmdBuff.c_str(), which will
-			 * return an array of characters representation of the string object.
-			 * 
-			 * Also, please do not forget to error check your exelp() system calls.
-			 */
+			
+			
 			
 			
 		}
