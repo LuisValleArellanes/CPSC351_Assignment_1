@@ -74,8 +74,6 @@ int main()
 			 */
 			
 			
-			/*** TODO: If I am a parent, I will do the following ***?
-			/* Wait for the child process to terminate */
 		}
 	}
 	while(cmdBuff != "exit");
