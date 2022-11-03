@@ -16,7 +16,6 @@ int main()
 	/* The ID of the child process */
 	pid_t pid;
 
-	pid = fork();
 	
 	/* Keep running until the user has typed "exit" */
 	do 
@@ -25,13 +24,12 @@ int main()
 		cerr << "cmd>  ";
 		cin >> cmdBuff;
 		
-		char *inString; 
 
 		int childEventInfo;
 
 		int waitReturn; 
 
-		string x;
+		
 		/* If the user wants to exit */
 		if(cmdBuff != "exit")
 		{
@@ -41,7 +39,7 @@ int main()
 			pid = fork();
 
 			if(pid == 0){
-				cin<<x;
+				int ls = 
 
 				/*** TODO: If I am child, I will do this: ****/
 			/* Call execlp() to replace my program with that specified at the command line.
@@ -53,12 +51,12 @@ int main()
 			 * Also, please do not forget to error check your exelp() system calls.
 			 */
 
-				execlp("/bin/%x" , "ls", "-l", "a", NULL);
+					//execlp("/bin/ls", "ls", "-l", "a", NULL);
+					execlp("/bin/", "ls", "-l", "a", NULL);
 				
 
 			}
 			/* TODO: Error check to make sure the child was successfully created */
-			
 			else if (pid < 0 ){
 
 					perror("fork");
