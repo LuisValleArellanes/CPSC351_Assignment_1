@@ -29,7 +29,10 @@ int main()
 
 		int waitReturn; 
 
+		string path = "/bin/" + cmdBuff;
 		
+		
+
 		/* If the user wants to exit */
 		if(cmdBuff != "exit")
 		{
@@ -39,7 +42,6 @@ int main()
 			pid = fork();
 
 			if(pid == 0){
-				int ls = 
 
 				/*** TODO: If I am child, I will do this: ****/
 			/* Call execlp() to replace my program with that specified at the command line.
@@ -51,8 +53,9 @@ int main()
 			 * Also, please do not forget to error check your exelp() system calls.
 			 */
 
-					//execlp("/bin/ls", "ls", "-l", "a", NULL);
-					execlp("/bin/", "ls", "-l", "a", NULL);
+					execlp(path.c_str(), cmdBuff.c_str(), NULL);
+					
+
 				
 
 			}
@@ -64,27 +67,20 @@ int main()
 					printf("There is no process running ");
 					
 					exit(1);
+				}else{
+					/*** TODO: If I am a parent, I will do the following ***?
+			/* Wait for the child process to terminate */
+					waitReturn = wait(&childEventInfo);
+					printf("Child has been completed \n");
+
+					
 				}
 
-			else{ 
-
-				/*** TODO: If I am a parent, I will do the following ***?
-			/* Wait for the child process to terminate */
-
-				waitReturn = wait(&childEventInfo);
-				
-				printf("Child has been completed");
+			
 				
 				
 			}
 			
-			
-				
-			
-			
-			
-			
-		}
 	}
 	while(cmdBuff != "exit");
 	
