@@ -66,6 +66,7 @@ int main(){
             exit(1); 
         }else{
             //do parent stuff
+            printf("--------Parent is waiting for current child----------\n"); 
             wait(NULL); 
         }
 
