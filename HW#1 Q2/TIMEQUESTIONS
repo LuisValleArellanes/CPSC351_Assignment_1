@@ -1,2 +1,22 @@
 QUESTION ANSWERS FOR PART II 
 
+1. In the output of time, what is the difference betweenreal,user, andsystimes?
+  - real: uses wall clock time from when the process starts to when it finishes 
+  - user: the amount of time the cpu spends in user mode while running the process 
+  - sys: the amount of time the cpu spends in the kernel within the process 
+  
+2. Which is longer user time or sys time? Use your knowledge to explain why.
+  - User time is generally longer bc when a process is running the cpu is mainly in usermode and ony switches to sys mode when the process invokes 
+    an instruction that only the OS can accomplish 
+    
+3. When fetching all of the locations in the file, which fetcher finishes faster? Why do you think that is?
+  - Serial took longer because the parent had to wait for each individual child to finish before moving to the next, while the parralel parent process
+    let the children work all at once, then waited for all of them at once to finish 
+    
+4. Suppose one of the fetcher children crashes. Will this affect other children? Explain.What is your conclusion regarding 
+    the benefits or disadvantages of isolating each fetchtask within a different process?
+  - (looking at our program) if a child crashes it will affect the other children as they will become orphans, In our Parallel program the parent 
+  uses a while loop to wait for the children and uses the condition "wait(NULL) > 0", if a child crashes the wait function will return a -1 causing 
+  the while loop to exit. If there are still children active while this happens the parent process will terminate without them and thus creating orphans. 
+  This is where the serial program strives as since the parent waits for each child before moving to the next, if one crashes it will simply return a -1
+  and then loop again moving onto the next child, avoiding any chances of orphans. 
