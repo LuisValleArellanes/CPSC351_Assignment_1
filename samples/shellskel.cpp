@@ -72,6 +72,8 @@ int main()
 			/* Wait for the child process to terminate */
 					waitReturn = wait(&childEventInfo);
 					printf("Child has been completed \n");
+				
+				exit(-1);
 
 					
 				}
